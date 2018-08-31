@@ -9,14 +9,11 @@ import {
 class App extends Component {
   render() {
     return ( <XLazyScriptLoader css = {''}
-      load = {
-        [{
-          name: 'Chart',
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js',
-        }, {
-          name: 'ReactChartjs2',
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/react-chartjs-2/2.7.4/react-chartjs-2.js'
-        }]
+      loadjs = {
+        ['https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js','https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.core.js']
+      }
+      loadcss = {
+        'https://www.w3schools.com/w3css/4/w3.css'
       }
       loading = {'Loading.....'}
       >'azat'</XLazyScriptLoader>
