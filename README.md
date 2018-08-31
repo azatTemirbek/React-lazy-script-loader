@@ -78,13 +78,14 @@ export default App;
 
 ## Available Scripts
 
-### ```git clone https://github.com/e178551/x-lazy-script-loader.git```
-
-### ```npm i```
+```bash
+git clone https://github.com/e178551/x-lazy-script-loader.git
+npm i
+npm start
+```
 
 In the project directory, you can run:
 
-### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
