@@ -16,7 +16,7 @@ class App extends Component {
         'https://www.w3schools.com/w3css/4/w3.css'
       }
       loading = {'Loading.....'}
-      >'azat'</XLazyScriptLoader>
+      >Loaded</XLazyScriptLoader>
     );
   }
 }

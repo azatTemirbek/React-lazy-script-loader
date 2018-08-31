@@ -1,13 +1,30 @@
 ## XLazyScriptLoader
 XLazyScriptLoader a componetn to load script from the CDN and apppend css
-```js
-React.createElement(XLazyScriptLoader,
-  {
-    loading:React.createElement(CustomLoadingComponent,{options}),
-    css:`.clas{color:red}`, 
-    load:[{name:'libName',src:'CDN'},{name:'libName',src:'CDN'}]||{name:'libName',src:'CDN'} }, 
-      childNode
-)
+```jsx
+import React, {
+  Component
+} from 'react';
+import './App.css';
+import {
+  XLazyScriptLoader
+} from './XLazyScriptLoader'
+
+class App extends Component {
+  render() {
+    return ( <XLazyScriptLoader css = {''}
+      loadjs = {
+        ['https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js','https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.core.js']
+      }
+      loadcss = {
+        'https://www.w3schools.com/w3css/4/w3.css'
+      }
+      loading = {'Loading.....'}
+      >Loaded </XLazyScriptLoader>
+    );
+  }
+}
+export default App;
+
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
