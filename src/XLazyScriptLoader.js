@@ -39,7 +39,7 @@ export class XLazyScriptLoader extends PureComponent {
                         // Need to set different attributes depending on tag type
                         switch (tag) {
                             case 'script':
-                                element.async = true;
+                                element.async = this.props.async || false;
                                 break;
                             case 'link':
                                 element.type = 'text/css';
@@ -76,13 +76,11 @@ export class XLazyScriptLoader extends PureComponent {
         this.CSSIntoDom(css)
     }
     render() {
-        return React.createElement(React.Fragment, {},
-            this.state.loading && this.props.loading,
-            !this.state.loading && this.props && this.props.children,
-        )
+        return React.createElement(React.Fragment, {},(this.state.loading)?this.props.loading:this.props.children)
     }
 }
 XLazyScriptLoader.propTypes = {
+    async : PropTypes.bool, 
     css: PropTypes.string,
     loadjs: PropTypes.oneOfType([
         PropTypes.array,
